@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova'Agri - Formulaire</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body style="background: var(--primary-color);">
+<div class="container">
+    <div class="form-header-buttons">
+        <a href="../index.html" class="btn btn-secondary btn-return" data-i18n="form.return">Retour à l'accueil</a>
+        <button id="langToggle" class="toggle-language-form" data-lang="fr" aria-label="Switch language"></button>
+    </div>
+    <section id="demo" class="demo">
+        <div class="demo-content">
+            <div class="demo-text">
+                <h2 data-i18n="demo.title">Prêt à transformer votre ferme ?</h2>
+                <p data-i18n="demo.text">
+                    Découvrez comment Nova’Agri Technologies peut révolutionner vos opérations agricoles. Obtenez une démonstration personnalisée adaptée à vos besoins spécifiques.
+                </p>
+            </div>
+            <div class="demo-form">
+                <form id="demoForm" class="form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Votre nom" data-i18n-placeholder="form.name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Adresse e-mail" data-i18n-placeholder="form.email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Numéro de téléphone" data-i18n-placeholder="form.phone">
+                    </div>
+                    <div class="form-group">
+                        <select id="farmType" name="farmType" required data-i18n-placeholder="form.select">
+                            <option value="" data-i18n="form.select">Sélectionnez le type d’exploitation</option>
+                            <option value="dairy" data-i18n="form.opt1">Exploitation laitière</option>
+                            <option value="livestock" data-i18n="form.opt2">Exploitation animale</option>
+                            <option value="crop" data-i18n="form.opt3">Production culturale</option>
+                            <option value="mixed" data-i18n="form.opt4">Agriculture mixte</option>
+                            <option value="transport" data-i18n="form.opt5">Transport</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" placeholder="Parlez-nous de vos besoins spécifiques" data-i18n-placeholder="form.message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" data-i18n="form.submit">Obtenez votre démonstration gratuite</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+<script src="../js/main.js"></script>
+</html>

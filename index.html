@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title data-i18n="meta.title">Nova'Agri Technologies – Lacto-connect, la solution de gestion laitière intelligente</title>
+  <meta name="description" content="Lacto-connect révolutionne la gestion des exploitations laitières avec un suivi en temps réel, gestion RH/financière et sécurité des données." data-i18n="meta.description">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <img src="assets/images/logo.svg" alt="Logo Nova'Agri" class="logo">
+      <span class="logo-text" data-i18n="nav.brand">Nova'Agri Technologies</span>
+    </div>
+
+    <div class="nav-menu" id="nav-menu">
+      <a href="#home" class="nav-link" data-i18n="nav.home">Accueil</a>
+      <a href="#solutions" class="nav-link" data-i18n="nav.solutions">Solutions</a>
+      <a href="#lacto-features" class="nav-link" data-i18n="nav.features">Fonctionnalités</a>
+      <a href="#about" class="nav-link" data-i18n="nav.about">À propos</a>
+      <a href="#about" class="nav-link" data-i18n="nav.contact">Contact</a>
+
+    </div>
+    <button id="langToggle" data-lang="fr" aria-label="Switch language"></button>
+    <div class="hamburger" id="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="hero">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span data-i18n="hero.line1">Lacto-connect :</span><br>
+        <span class="highlight" data-i18n="hero.line2">La révolution de la gestion laitière</span>
+      </h1>
+      <p class="hero-description" data-i18n="hero.desc">
+        Transformez votre exploitation laitière avec Lacto-connect. Suivi en temps réel, gestion RH et financière, contrôle des stocks - tout en un. Sécurité garantie et facilité d'utilisation pour les producteurs laitiers modernes.
+      </p>
+      <div class="hero-buttons">
+        <a href="./pages/form.html?pack=demo" class="btn btn-primary" data-i18n="hero.btn1">Démo gratuite</a>
+        <button class="btn btn-secondary" onclick="scrollToSection('lacto-features')" data-i18n="hero.btn2">Découvrir Lacto-connect</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><h3 data-i18n="stats.farms">100+</h3><p data-i18n="stats.farmsLabel">Exploitations laitières</p></div>
+        <div class="stat"><h3 data-i18n="stats.uptime">99,9%</h3><p data-i18n="stats.uptimeLabel">Disponibilité</p></div>
+        <div class="stat"><h3 data-i18n="stats.support">24/7</h3><p data-i18n="stats.supportLabel">Support</p></div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="hero-visual">
+        <div class="floating-card card-1">
+          <div class="card-icon">🥛</div>
+          <div class="card-content">
+            <h4 data-i18n="floating1.title">Suivi lait temps réel</h4>
+            <p data-i18n="floating1.text">Qualité & traçabilité</p>
+          </div>
+        </div>
+        <div class="floating-card card-2">
+          <div class="card-icon">💼</div>
+          <div class="card-content">
+            <h4 data-i18n="floating2.title">Gestion RH & Finance</h4>
+            <p data-i18n="floating2.text">Personnel & comptabilité</p>
+          </div>
+        </div>
+        <div class="floating-card card-3">
+          <div class="card-icon">📦</div>
+          <div class="card-content">
+            <h4 data-i18n="floating3.title">Gestion des stocks</h4>
+            <p data-i18n="floating3.text">Inventaire automatisé</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Solutions -->
+<section id="solutions" class="solutions">
+  <div class="container">
+    <div class="section-header">
+      <h2 data-i18n="sol.title">Nos solutions Nova'Agri</h2>
+      <p data-i18n="sol.desc">Technologies avancées pour révolutionner vos opérations agricoles</p>
+    </div>
+    <div class="solutions-grid">
+      <div class="solution-card featured">
+        <div class="solution-badge" data-i18n="sol1.badge">Solution principale</div>
+        <div class="solution-icon">
+          <div class="icon-circle">🥛</div>
+        </div>
+        <h3 data-i18n="sol1.title">Lacto-connect</h3>
+        <p class="solution-subtitle" data-i18n="sol1.subtitle">La solution complète de gestion laitière</p>
+        <p data-i18n="sol1.text">
+          Optimisez chaque aspect de votre production laitière avec notre plateforme intégrée. Du suivi en temps réel à la gestion financière, Lacto-connect centralise toutes vos opérations.
+        </p>
+        <ul class="feature-list">
+          <li data-i18n="sol1.f1">Suivi du lait en temps réel</li>
+          <li data-i18n="sol1.f2">Gestion RH et financière intégrée</li>
+          <li data-i18n="sol1.f3">Contrôle automatisé des stocks</li>
+          <li data-i18n="sol1.f4">Interface intuitive et facile d'utilisation</li>
+          <li data-i18n="sol1.f5">Sécurité garantie des données</li>
+        </ul>
+        <div class="solution-image-placeholder">
+          <img src="assets/images/lacto-connect-dashboard.jpg" alt="Lacto-connect Dashboard" style="width: 100%; border-radius: 8px; margin: 16px 0;">
+        </div>
+        <a href="./pages/form.html?pack=lacto-connect" class="btn btn-primary btn-full" data-i18n="sol1.btn">Essayer gratuitement</a>
+      </div>
+
+      <div class="solution-card secondary">
+        <div class="solution-icon">
+          <div class="icon-circle secondary">🌾</div>
+        </div>
+        <h3 data-i18n="sol2.title">Insem-connect</h3>
+        <p data-i18n="sol2.text">
+          Solution complémentaire pour la gestion globale des approvisionnements et de la logistique agricole.
+        </p>
+        <ul class="feature-list">
+          <li data-i18n="sol2.f1">Gestion des approvisionnements</li>
+          <li data-i18n="sol2.f2">Optimisation logistique</li>
+          <li data-i18n="sol2.f3">Suivi des livraisons</li>
+        </ul>
+        <button class="btn btn-outline" data-i18n="sol2.btn">En savoir plus</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lacto-connect Detailed Features -->
+<section id="lacto-features" class="lacto-features">
+  <div class="container">
+    <div class="section-header">
+      <h2 data-i18n="lacto.title">Pourquoi choisir Lacto-connect ?</h2>
+      <p data-i18n="lacto.desc">La solution tout-en-un qui transforme votre exploitation laitière</p>
+    </div>
+
+    <div class="lacto-grid">
+      <div class="lacto-feature">
+        <div class="feature-icon-large">🥛</div>
+        <h3 data-i18n="lacto.f1.title">Suivi du lait en temps réel</h3>
+        <p data-i18n="lacto.f1.desc">Monitoring continu de la qualité, température et traçabilité complète de la production à la livraison.</p>
+        <div class="feature-image-placeholder">
+          <div class="placeholder-content">
+            <span>Interface de suivi temps réel</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lacto-feature">
+        <div class="feature-icon-large">💼</div>
+        <h3 data-i18n="lacto.f2.title">Gestion RH et financière</h3>
+        <p data-i18n="lacto.f2.desc">Centralisation complète des ressources humaines, paie, comptabilité et gestion financière de votre exploitation.</p>
+        <div class="feature-image-placeholder">
+          <div class="placeholder-content">
+            <span>Tableau de bord RH & Finance</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lacto-feature">
+        <div class="feature-icon-large">📦</div>
+        <h3 data-i18n="lacto.f3.title">Gestion des stocks intelligente</h3>
+        <p data-i18n="lacto.f3.desc">Automatisation de l'inventaire, alertes de réapprovisionnement et optimisation des commandes.</p>
+        <div class="feature-image-placeholder">
+          <div class="placeholder-content">
+            <span>Système de gestion stocks</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lacto-feature">
+        <div class="feature-icon-large">⚡</div>
+        <h3 data-i18n="lacto.f4.title">Facilité d'utilisation</h3>
+        <p data-i18n="lacto.f4.desc">Interface intuitive conçue pour les agriculteurs. Formation rapide et prise en main immédiate.</p>
+        <div class="feature-image-placeholder">
+          <div class="placeholder-content">
+            <span>Interface utilisateur simple</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lacto-feature">
+        <div class="feature-icon-large">🔒</div>
+        <h3 data-i18n="lacto.f5.title">Sécurité garantie</h3>
+        <p data-i18n="lacto.f5.desc">Protection maximale de vos données avec chiffrement de niveau bancaire et sauvegardes automatiques.</p>
+        <div class="feature-image-placeholder">
+          <div class="placeholder-content">
+            <span>Sécurité et protection données</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lacto-feature">
+        <div class="feature-icon-large">🆓</div>
+        <h3 data-i18n="lacto.f6.title">Démo gratuite</h3>
+        <p data-i18n="lacto.f6.desc">Testez toutes les fonctionnalités gratuitement. Notre équipe vous accompagne personnellement.</p>
+        <div class="feature-image-placeholder">
+          <div class="placeholder-content">
+            <span>Session de démonstration</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lacto-cta">
+      <h3 data-i18n="lacto.cta.title">Prêt à révolutionner votre exploitation ?</h3>
+      <p data-i18n="lacto.cta.desc">Rejoignez les centaines d'éleveurs qui font déjà confiance à Lacto-connect</p>
+      <a href="./pages/form.html?pack=demo" class="btn btn-primary btn-lg" data-i18n="lacto.cta.btn">Demander ma démo gratuite</a>
+    </div>
+  </div>
+</section>
+
+<!-- Packs Section (Updated for Lacto-connect) -->
+<section id="packs" class="packs">
+  <div class="container">
+    <div class="section-header">
+      <h2 data-i18n="packs.title">Nos offres Lacto-connect</h2>
+      <p data-i18n="packs.desc">Choisissez l'offre qui correspond à votre exploitation laitière</p>
+    </div>
+    <div class="packs-grid">
+      <div class="pack-card">
+        <h3 data-i18n="pack1.title">Lacto Starter</h3>
+        <p class="pack-price" data-i18n="pack1.price">Pour petites exploitations</p>
+        <ul class="pack-features">
+          <li data-i18n="pack1.f1">Suivi du lait de base</li>
+          <li data-i18n="pack1.f2">Gestion simple des stocks</li>
+          <li data-i18n="pack1.f3">Support par email</li>
+          <li data-i18n="pack1.f4">Formation en ligne</li>
+        </ul>
+        <a href="./pages/form.html?pack=starter" class="btn btn-primary btn-full" data-i18n="pack1.btn">Choisir Starter</a>
+      </div>
+      <div class="pack-card featured">
+        <div class="pack-badge" data-i18n="pack2.badge">Populaire</div>
+        <h3 data-i18n="pack2.title">Lacto Professional</h3>
+        <p class="pack-price" data-i18n="pack2.price">Pour exploitations moyennes</p>
+        <ul class="pack-features">
+          <li data-i18n="pack2.f1">Toutes fonctionnalités Lacto-connect</li>
+          <li data-i18n="pack2.f2">Gestion RH complète</li>
+          <li data-i18n="pack2.f3">Analyses avancées</li>
+          <li data-i18n="pack2.f4">Support prioritaire</li>
+          <li data-i18n="pack2.f5">Formation sur site</li>
+        </ul>
+        <a href="./pages/form.html?pack=professional" class="btn btn-primary btn-full" data-i18n="pack2.btn">Choisir Professional</a>
+      </div>
+      <div class="pack-card">
+        <h3 data-i18n="pack3.title">Lacto Enterprise</h3>
+        <p class="pack-price" data-i18n="pack3.price">Pour grandes exploitations</p>
+        <ul class="pack-features">
+          <li data-i18n="pack3.f1">Lacto-connect + Insem-connect</li>
+          <li data-i18n="pack3.f2">Intégrations personnalisées</li>
+          <li data-i18n="pack3.f3">API complète</li>
+          <li data-i18n="pack3.f4">Support 24/7 dédié</li>
+          <li data-i18n="pack3.f5">Account manager personnel</li>
+        </ul>
+        <a href="./pages/form.html?pack=enterprise" class="btn btn-primary btn-full" data-i18n="pack3.btn">Choisir Enterprise</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+  <div class="container about-content">
+    <div class="about-text">
+      <h2 data-i18n="about.title">À propos de Nova'Agri Technologies</h2>
+      <p class="lead" data-i18n="about.lead">
+        Spécialistes de la digitalisation des exploitations laitières depuis plus de 5 ans.
+      </p>
+      <p data-i18n="about.text">
+        Nova'Agri Technologies est née de la passion de révolutionner le secteur laitier. Nos solutions Lacto-connect et Insem-connect sont développées en collaboration directe avec des producteurs laitiers pour répondre aux vrais défis du terrain.
+      </p>
+      <div class="about-stats">
+        <div class="about-stat"><h4 data-i18n="about.s1">200+</h4><p data-i18n="about.s1Label">Exploitations équipées</p></div>
+        <div class="about-stat"><h4 data-i18n="about.s2">15+</h4><p data-i18n="about.s2Label">Pays d'intervention</p></div>
+        <div class="about-stat"><h4 data-i18n="about.s3">98%</h4><p data-i18n="about.s3Label">Satisfaction client</p></div>
+      </div>
+    </div>
+    <div class="about-image">
+      <div class="image-placeholder">
+        <div class="placeholder-content">
+          <h3 data-i18n="placeholder.title">Votre succès avec Lacto-connect</h3>
+          <p data-i18n="placeholder.text">Rejoignez les éleveurs qui révolutionnent leur exploitation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-section">
+      <div class="footer-logo">
+        <img src="assets/images/logo.svg" alt="Nova'Agri Technologies" class="logo">
+        <span class="logo-text">Nova'Agri Technologies</span>
+      </div>
+      <p data-i18n="footer.tagline">Révolutionner l'agriculture laitière grâce à Lacto-connect.</p>
+    </div>
+    <div class="footer-section">
+      <h3 data-i18n="footer.sol">Solutions</h3>
+      <ul>
+        <li><a href="#solutions" data-i18n="footer.sol1">Lacto-connect</a></li>
+        <li><a href="#solutions" data-i18n="footer.sol2">Insem-connect</a></li>
+        <li><a href="#packs" data-i18n="footer.sol3">Nos offres</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3 data-i18n="footer.comp">À propos</h3>
+      <ul>
+        <li><a href="#about" data-i18n="footer.comp1">À propos de nous</a></li>
+        <li><a href="#" data-i18n="footer.comp3">Politique de confidentialité</a></li>
+        <li><a href="#" data-i18n="footer.comp4">Conditions d'utilisation</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3 data-i18n="footer.sup">Contact</h3>
+      <ul>
+        <li><a href="#" data-i18n="footer.sup1">Centre d'aide</a></li>
+        <li><a href="#" data-i18n="footer.sup2">Documentation</a></li>
+        <li><a href="./pages/form.html?pack=demo" data-i18n="footer.sup4">Demander une démo</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p data-i18n="footer.copy">© 2025 Nova'Agri Technologies. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
+
