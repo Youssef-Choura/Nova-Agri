@@ -386,38 +386,40 @@ section {
 .floating-card {
     position: absolute;
     background: var(--white);
+    max-width: 300px; /* was 200px */
+    min-width: 250px; /* optional: ensures a minimum width */
+    height: 120px; /* was 60px */
+    padding: 20px;    /* slightly larger padding */
     border-radius: 12px;
-    padding: 16px;
     box-shadow: var(--shadow);
     display: flex;
     align-items: center;
     gap: 12px;
-    max-width: 200px;
     animation: float 3s ease-in-out infinite;
 }
 
+.card-2 {
+    top: 40%;
+    right: 20px;
+    --card-transform: translateY(-50%);
+    animation-delay: 1s;
+}
+.card-3 {
+    bottom: 20px;
+    left: 5%;
+    --card-transform: translateX(-50%);
+    animation-delay: 2s;
+}
 .card-1 {
     top: 20px;
     left: 20px;
+    --card-transform: none;
     animation-delay: 0s;
 }
 
-.card-2 {
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    animation-delay: 1s;
-}
-
-.card-3 {
-    bottom: 20px;
-    left: 20%;
-    transform: translateX(-50%);
-    animation-delay: 2s;
-}
 
 .card-icon {
-    font-size: 1.5rem;
+    font-size: 2rem;
     width: 40px;
     height: 40px;
     background: var(--background-light);
@@ -428,13 +430,13 @@ section {
 }
 
 .card-content h4 {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 2px;
 }
 
 .card-content p {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     color: var(--text-light);
 }
 
@@ -1038,7 +1040,7 @@ section {
 
 
 /* ===============================================
-    DEMO PAGE
+    CONTACT PAGE
 =============================================== */
 .form-header-buttons {
     position: relative;
@@ -1047,8 +1049,10 @@ section {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    z-index: 10;
 }
-.toggle-language-form{
+
+.toggle-language-form {
     background: var(--white);
     color: var(--primary-color);
     border: 1px solid var(--white);
@@ -1058,7 +1062,9 @@ section {
     align-items: center;
     gap: 6px;
     transition: var(--transition);
+    cursor: pointer;
 }
+
 .toggle-language-form:hover {
     background: var(--primary-color);
     color: var(--white);
@@ -1078,6 +1084,7 @@ section {
     text-decoration: none;
     transition: var(--transition);
 }
+
 .btn-return:hover {
     background: var(--primary-color);
     color: var(--white);
@@ -1085,12 +1092,17 @@ section {
     box-shadow: var(--shadow-hover);
 }
 
-
+/* Default (French/LTR): Arrow before text */
 .btn-return::before {
     content: "← ";
 }
 
-.demo {
+.btn-return::after {
+    content: "";
+}
+
+
+.contact-section {
     padding: 100px 0;
     background: var(--primary-color);
     color: var(--white);
@@ -1098,62 +1110,143 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: calc(100vh - 40px);
 }
 
-.demo-content {
+.contact-content {
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.demo-text {
+.contact-text {
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
 }
 
-.demo-form {
+.contact-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--white);
+}
+
+.contact-text p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.contact-card {
     background: var(--white);
-    padding: 30px;
-    border-radius: 16px;
+    padding: 40px;
+    border-radius: 20px;
     box-shadow: var(--shadow-hover);
     color: var(--text-dark);
+    animation: fadeInUp 0.8s ease-out;
 }
 
-.form-group {
-    margin-bottom: 20px;
+.contact-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--background-light);
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-    font-family: 'Inter', sans-serif;
-    width: 100%;
-    padding: 12px 16px;
-    border: 2px solid var(--border-color);
-    border-radius: var(--border-radius);
-    font-size: 1rem;
+.contact-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.contact-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0;
+}
+
+.contact-message {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact-message p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-method {
+    padding: 20px;
+    background: var(--background-light);
+    border-radius: 12px;
+    text-align: center;
     transition: var(--transition);
-    background: var(--white);
+}
+
+.contact-method:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.method-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.method-content h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
     color: var(--text-dark);
+    margin-bottom: 12px;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.1);
+.contact-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: var(--transition);
+    margin: 4px 0;
 }
 
-.form-group textarea {
-    resize: vertical;
-    min-height: 100px;
+.contact-link:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-1px);
 }
 
-.btn-full {
-    font-family: 'Inter', sans-serif;
-    width: 100%;
+.contact-numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-footer {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.contact-footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.contact-footer strong {
+    font-weight: 700;
 }
 
 /* ===============================================
@@ -1417,23 +1510,34 @@ html[lang="ar"] .footer-section:last-child a {
     display: flex !important;
     gap: 6px;
 }
-/* Demo RTL */
-html[lang="ar"] .demo-text {
-    text-align: right;
-}
-html[lang="ar"] input {
-    text-align: right;
+/* RTL Support */
+html[lang="ar"] .contact-text {
+    text-align: center;
 }
 
-html[lang="ar"] .form-header-buttons {
-    flex-direction: row-reverse;
-}
-/* Preserve centered elements */
-html[lang="ar"] .section-header,
-html[lang="ar"] .stat,
-html[lang="ar"] .service-card,
-html[lang="ar"] .clientele-item {
+html[lang="ar"] .contact-header {
     text-align: center;
+}
+
+html[lang="ar"] .contact-message {
+    text-align: center;
+}
+
+html[lang="ar"] .contact-method {
+    text-align: center;
+}
+
+html[lang="ar"] .contact-footer {
+    text-align: center;
+}
+
+/* Arabic/RTL: Arrow after text */
+html[lang="ar"] .btn-return::before {
+    content: "";
+}
+
+html[lang="ar"] .btn-return::after {
+    content: " ←";
 }
 
 /* ===============================================
@@ -1542,10 +1646,16 @@ html[lang="ar"] .clientele-item {
     }
 
     .floating-card {
-        max-width: 140px;
+        max-width: 90vw;    /* nearly full screen width */
+        min-width: 210px;   /* optional: wider minimum */
+        height: 80px; /* allow height to adjust */
         padding: 12px;
         position: relative;
         margin: 12px auto;
+    }
+
+    .card-3{
+        left: 10%;
     }
 
     /* Services */
@@ -1727,24 +1837,59 @@ html[lang="ar"] .clientele-item {
         order: 2;
     }
 
-    /* Demo Page */
-    .demo-content {
-        padding: 0 10px;
+    /*contact page */
+    .contact-content {
+        padding: 0 15px;
+        max-width: 100%;
     }
-    .demo-form {
-        padding: 20px;
-        border-radius: 12px;
+
+    .contact-text h2 {
+        font-size: 2rem;
     }
-    .demo-text h2 {
-        font-size: 1.5rem;
-    }
-    .demo-text p {
+
+    .contact-text p {
         font-size: 1rem;
     }
 
-    .btn-full {
-        width: 100% !important;
-        height: 50px;
+    .contact-card {
+        padding: 25px 20px;
+        border-radius: 16px;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .contact-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .contact-message p {
+        font-size: 1rem;
+    }
+
+    .contact-methods {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-method {
+        padding: 16px;
+    }
+
+    .method-content h4 {
+        font-size: 1.1rem;
+    }
+
+    .contact-link {
+        font-size: 0.95rem;
+        padding: 6px 10px;
+    }
+
+    .contact-footer {
+        padding: 16px;
+    }
+
+    .contact-footer p {
+        font-size: 0.9rem;
     }
 }
 
@@ -1790,21 +1935,29 @@ html[lang="ar"] .clientele-item {
         padding: 15px;
     }
 
-    /* Demo Page */
+    /* Contact Page */
+    .contact-section {
+        padding: 80px 0;
+    }
 
-    .btn-full {
-        width: 100% !important;
-        height: 50px;
+    .contact-text h2 {
+        font-size: 1.8rem;
     }
-    .demo-form {
-        padding: 20px;
-        border-radius: 8px;
+
+    .contact-card {
+        padding: 20px 15px;
     }
-    .demo-text h2 {
+
+    .contact-header h3 {
         font-size: 1.2rem;
     }
-    .demo-text p {
-        font-size: 0.9rem;
+
+    .contact-icon {
+        font-size: 2.5rem;
+    }
+
+    .method-icon {
+        font-size: 1.8rem;
     }
 }
 

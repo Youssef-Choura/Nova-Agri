@@ -3,49 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nova'Agri - Formulaire</title>
+    <title>Nova'Agri - Contact</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body style="background: var(--primary-color);">
 <div class="container">
     <div class="form-header-buttons">
-        <a href="../index.html" class="btn btn-secondary btn-return" data-i18n="form.return">Retour à l'accueil</a>
+        <a href="../index.html" class="btn btn-secondary btn-return" data-i18n="contact.return">Retour à l'accueil</a>
         <button id="langToggle" class="toggle-language-form" data-lang="fr" aria-label="Switch language"></button>
     </div>
-    <section id="demo" class="demo">
-        <div class="demo-content">
-            <div class="demo-text">
-                <h2 data-i18n="demo.title">Prêt à transformer votre ferme ?</h2>
-                <p data-i18n="demo.text">
-                    Découvrez comment Nova’Agri Technologies peut révolutionner vos opérations agricoles. Obtenez une démonstration personnalisée adaptée à vos besoins spécifiques.
+    <section id="contact" class="contact-section">
+        <div class="contact-content">
+            <div class="contact-text">
+                <h2 data-i18n="contact.title">Contactez notre équipe</h2>
+                <p data-i18n="contact.subtitle">
+                    Votre partenaire digital pour des solutions sur mesure
                 </p>
             </div>
-            <div class="demo-form">
-                <form id="demoForm" class="form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Votre nom" data-i18n-placeholder="form.name" required>
+            <div class="contact-card">
+                <div class="contact-header">
+                    <div class="contact-icon">📞</div>
+                    <h3 data-i18n="contact.card.title">Demandez votre démo ou posez vos questions</h3>
+                </div>
+                <div class="contact-message">
+                    <p data-i18n="contact.card.message">
+                        Pour découvrir nos solutions Lacto-connect et Insem-connect ou pour toute question concernant nos services de développement sur mesure, notre équipe commerciale est à votre disposition.
+                    </p>
+                </div>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="method-icon">📞</div>
+                        <div class="method-content">
+                            <h4 data-i18n="contact.phone.title">Appelez-nous</h4>
+                            <div class="contact-numbers">
+                                <a href="tel:+21695964123" class="contact-link">
+                                    <span class="ltr">(+216) 95 964 123</span>
+                                </a>
+                                <a href="tel:+21657126885" class="contact-link">
+                                    <span class="ltr">(+216) 57 126 885</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Adresse e-mail" data-i18n-placeholder="form.email" required>
+                    <div class="contact-method">
+                        <div class="method-icon">✉️</div>
+                        <div class="method-content">
+                            <h4 data-i18n="contact.email.title">Écrivez-nous</h4>
+                            <a href="mailto:contact@novaagri-tech.com" class="contact-link">
+                                <span class="ltr">contact@novaagri-tech.com</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone" placeholder="Numéro de téléphone" data-i18n-placeholder="form.phone">
-                    </div>
-                    <div class="form-group">
-                        <select id="farmType" name="farmType" required data-i18n-placeholder="form.select">
-                            <option value="" data-i18n="form.select">Sélectionnez le type d’exploitation</option>
-                            <option value="dairy" data-i18n="form.opt1">Exploitation laitière</option>
-                            <option value="livestock" data-i18n="form.opt2">Exploitation animale</option>
-                            <option value="crop" data-i18n="form.opt3">Production culturale</option>
-                            <option value="mixed" data-i18n="form.opt4">Agriculture mixte</option>
-                            <option value="transport" data-i18n="form.opt5">Transport</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="4" placeholder="Parlez-nous de vos besoins spécifiques" data-i18n-placeholder="form.message"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-full" data-i18n="form.submit">Obtenez votre démonstration gratuite</button>
-                </form>
+                </div>
+                <div class="contact-footer">
+                    <p data-i18n="contact.card.footer">
+                        <strong data-i18n="contact.card.footer.bold">Réponse garantie sous 24h</strong> - Notre équipe vous accompagne dans votre projet
+                    </p>
+                </div>
             </div>
         </div>
     </section>
