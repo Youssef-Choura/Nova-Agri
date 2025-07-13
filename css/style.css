@@ -774,11 +774,54 @@ section {
 
 .packs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
     margin-top: 40px;
     width: 100%;
     max-width: 100%;
+}
+/* Additional styling for new pack elements */
+.packs-subdesc {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.pack-range {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.pack-subtitle {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pack-card {
+    padding: 25px 20px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pack-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.pack-price {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 .pack-card {
@@ -816,19 +859,6 @@ section {
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 600;
-}
-
-.pack-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: var(--text-dark);
-}
-
-.pack-price {
-    font-style: italic;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    font-weight: 500;
 }
 
 .pack-features {
