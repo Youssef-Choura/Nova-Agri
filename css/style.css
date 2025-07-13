@@ -486,6 +486,14 @@ section {
 /* ===============================================
    SOLUTIONS SECTION
 =============================================== */
+
+.container-solutions{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    width: 100%; /* Ensure full width utilization */
+    overflow: hidden; /* Prevent horizontal scroll */
+}
 .solutions {
     background: var(--background-light);
 }
