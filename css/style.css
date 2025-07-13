@@ -507,6 +507,7 @@ section {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    max-height:100%; /* Prevents overflow */
     width: 100%;
     max-width: 100%;
 }
@@ -530,6 +531,7 @@ section {
     background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%);
     border: 2px solid var(--primary-color);
     padding-top: 30px;
+    overflow: hidden;
 }
 
 .solution-card.secondary {
